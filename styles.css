@@ -24,11 +24,11 @@
 }
 
 body {
-    background-color: var(--bg-color);
     background-color: #f0e6ea; 
     background-size: cover;
     background-position: center;
     min-height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +49,7 @@ body::before {
 }
 
 #particles-js {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
@@ -116,11 +116,14 @@ body::before {
 }
 
 .card {
-    width: 120%;
-    height: 600px;
+    width: 100%;
+    height: auto;
+    min-height: 580px;
+    max-height: calc(100vh - 40px);
     position: relative;
     transform-style: preserve-3d;
     transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin: 0 auto;
 }
 
 .card-container:hover .card {
@@ -149,12 +152,12 @@ body::before {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 20px;
-    padding: 25px;
+    padding: 20px;
     box-shadow: 0 15px 35px rgba(255, 102, 153, 0.25);
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
+    overflow-y: auto;
     transition: all 0.5s ease;
 }
 
@@ -181,7 +184,7 @@ body::before {
     background: var(--card-bg);
     background-image: linear-gradient(135deg, var(--primary-light) 0%, white 50%);
     transform: rotateY(180deg);
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .profile-container {
@@ -191,8 +194,8 @@ body::before {
 }
 
 .profile-circle {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     display: flex;
@@ -207,8 +210,8 @@ body::before {
 
 .profile-border {
     position: absolute;
-    width: 130px;
-    height: 130px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     border: 2px dashed var(--primary-color);
     top: 50%;
@@ -221,8 +224,8 @@ body::before {
     position: absolute;
     top: -5px;
     left: -5px;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background: var(--accent-color);
     color: white;
@@ -230,7 +233,7 @@ body::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     border: 2px solid white;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     z-index: 2;
@@ -268,8 +271,8 @@ body::before {
 }
 
 .profile-image {
-    width: 114px;
-    height: 114px;
+    width: 94px;
+    height: 94px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid white;
@@ -286,8 +289,8 @@ body::before {
     right: -5px;
     background: var(--secondary-color);
     color: white;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -310,25 +313,25 @@ body::before {
     top: 20px;
     z-index: 1;
     overflow: hidden;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     text-align: right;
 }
 
 .ribbon span {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: bold;
     color: #FFF;
     text-align: center;
-    line-height: 30px;
+    line-height: 25px;
     transform: rotate(45deg);
-    width: 150px;
+    width: 130px;
     display: block;
     background: var(--gradient-primary);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     position: absolute;
-    top: 25px;
-    right: -35px;
+    top: 20px;
+    right: -30px;
     text-transform: uppercase;
 }
 
@@ -358,7 +361,7 @@ body::before {
 
 .name {
     color: var(--text-color);
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin-bottom: 5px;
     font-weight: 600;
     background: var(--gradient-primary);
@@ -383,7 +386,7 @@ body::before {
 
 .title {
     color: var(--text-color);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     margin-bottom: 12px;
     margin-top: 8px;
     display: flex;
@@ -412,6 +415,8 @@ body::before {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    max-height: none;
+    overflow-y: auto;
 }
 
 .skills {
@@ -426,7 +431,7 @@ body::before {
 .skill-tag {
     background: var(--gradient-primary);
     color: white;
-    padding: 5px 12px;
+    padding: 5px 10px;
     border-radius: 20px;
     font-size: 0.75rem;
     display: flex;
@@ -461,9 +466,10 @@ body::before {
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-top: auto;
+    gap: 10px;
+    margin-top: 15px;
     margin-bottom: 12px;
+    flex-wrap: wrap;
 }
 
 .social-link {
@@ -544,7 +550,7 @@ body::before {
 }
 
 .card-back h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 20px;
     margin-top: 5px;
     font-weight: 600;
@@ -577,6 +583,8 @@ body::before {
 .skill-bars {
     width: 100%;
     margin-bottom: 15px;
+    max-height: none;
+    overflow-y: auto;
 }
 
 .skill {
@@ -727,36 +735,81 @@ body::before {
     left: 0;
 }
 
-@media (max-width: 480px) {
-    .card {
-        height: 550px;
-    }
-    
+@media (max-width: 370px) {
     .profile-circle {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
     }
     
     .profile-image {
-        width: 94px;
-        height: 94px;
+        width: 74px;
+        height: 74px;
     }
     
     .profile-border {
-        width: 110px;
-        height: 110px;
+        width: 90px;
+        height: 90px;
     }
     
     .name {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     
-    .description {
+    .title {
         font-size: 0.8rem;
     }
     
+    .card-front, .card-back {
+        padding: 15px;
+    }
+    
+    .description {
+        font-size: 0.75rem;
+    }
+    
     .skill-tag, .social-link {
-        font-size: 0.7rem;
-        padding: 4px 8px;
+        font-size: 0.65rem;
+        padding: 3px 6px;
+    }
+    
+    .card-back h2 {
+        font-size: 1.1rem;
+    }
+    
+    .card-back h3 {
+        font-size: 0.9rem;
+    }
+    
+    .skill-name {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        min-height: 520px;
+    }
+    
+    .social-links {
+        flex-wrap: wrap;
+    }
+    
+    .ribbon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .ribbon span {
+        font-size: 0.6rem;
+        line-height: 20px;
+        width: 110px;
+        top: 15px;
+        right: -25px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .card {
+        max-width: 340px;
     }
 }
