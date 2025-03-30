@@ -8,133 +8,142 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="video-background">
-        <video autoplay loop muted playsinline>
-            <source src="video/pink.mp4" type="video/mp4">
-        </video>
+    <!-- Pantalla de introducción mejorada -->
+    <div class="intro-screen">
+        <div class="intro-particles" id="particles"></div>
+        <div class="intro-decorations">
+            <div class="intro-circle"></div>
+            <div class="intro-square"></div>
+            <div class="intro-triangle"></div>
+            <div class="intro-diamond"></div>
+        </div>
+        <div class="intro-content">
+            <div class="intro-name">Yadhira Alcantara</div>
+            <div class="intro-subtitle">Backend Developer </div>
+            <div class="intro-loading">
+                <div class="intro-progress"></div>
+            </div>
+        </div>
     </div>
-    
-    <div class="card-container">
-        <div class="decorative-element circle-1"></div>
-        <div class="decorative-element circle-2"></div>
-        <div class="decorative-element square"></div>
-        <div class="decorative-element triangle"></div>
+
+    <div class="main-content">
+        <div class="video-background">
+            <video autoplay loop muted playsinline>
+                <source src="video/pink.mp4" type="video/mp4">
+            </video>
+        </div>
         
-        <div class="card">
-            <div class="card-inner">
-                <div class="card-front">
-                    <div class="profile-container">
-                        <div class="profile-circle">
-                            <div class="profile-border"></div>
-                            <img src="https://i.pinimg.com/736x/26/07/df/2607dfc1b672ab1549682dfdef1d29e3.jpg" alt="Foto de perfil" class="profile-image">
-                            <div class="profile-icon">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <div class="age-circle">18</div>
-                        </div>
-                    </div>
-                    
-                    <h1 class="name">Yadhira Alcantara</h1>
-                    
-                    <div class="title">
-                        <span class="icon"><i class="fas fa-user-graduate"></i></span>
-                        Estudiante, Backend Developer
-                    </div>
-                    
-                    <div class="ribbon">
-                        <span>Developer</span>
-                    </div>
-                    
-                    <p class="description">
-                        Desarrolladora backend enfocada en crear soluciones eficientes y escalables. 
-                        Estudiante de Diseño y Desarrollo de Software con interés en inteligencia artificial.
-                    </p>
-                    
-                    <div class="skills">
-                        <div class="skill-tag"><i class="fab fa-java"></i> Java</div>
-                        <div class="skill-tag"><i class="fab fa-php"></i> PHP</div>
-                        <div class="skill-tag"><i class="fas fa-database"></i> SQL</div>
-                        <div class="skill-tag"><i class="fab fa-python"></i> Python</div>
-                        <div class="skill-tag"><i class="fas fa-leaf"></i> Spring Boot</div>
-                        <div class="skill-tag"><i class="fas fa-server"></i> API REST</div>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="https://github.com/yad615" class="social-link"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="https://www.linkedin.com/in/yadhira-geraldine-alcantara-rodriguez-6b745a339/" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                    </div>
-                    
-                    <div class="flip-info">
-                        <small>Haz clic para más información</small>
-                    </div>
-                </div>
-                
-                <div class="card-back">
-                    <h2>Mis Habilidades</h2>
-                    <div class="skill-bars">
-                        <div class="skill">
-                            <div class="skill-name">
-                                Backend <i class="fas fa-server skill-icon"></i>
-                                <span class="skill-percentage"></span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-level skill-level-1"></div>
+        <div class="card-container">
+            <div class="decorative-element circle-1"></div>
+            <div class="decorative-element circle-2"></div>
+            <div class="decorative-element square"></div>
+            <div class="decorative-element triangle"></div>
+            
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="profile-container">
+                            <div class="profile-circle">
+                                <div class="profile-border"></div>
+                                <img src="https://i.pinimg.com/736x/26/07/df/2607dfc1b672ab1549682dfdef1d29e3.jpg" alt="Foto de perfil" class="profile-image">
+                                <div class="profile-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="age-circle">18</div>
                             </div>
                         </div>
-                        <div class="skill">
-                            <div class="skill-name">
-                                Base de Datos <i class="fas fa-database skill-icon"></i>
-                                <span class="skill-percentage"></span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-level skill-level-2"></div>
-                            </div>
+                        
+                        <h1 class="name">Yadhira Alcantara</h1>
+                        
+                        <div class="title">
+                            <span class="icon"><i class="fas fa-user-graduate"></i></span>
+                            Estudiante, Backend Developer
                         </div>
-                        <div class="skill">
-                            <div class="skill-name">
-                                Frontend <i class="fas fa-desktop skill-icon"></i>
-                                <span class="skill-percentage"></span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-level skill-level-3"></div>
-                            </div>
-                    </div> 
-                    <div class="contact-info">
-                        <h3><i class="fas fa-address-card"></i> Contacto</h3>
-                        <p>
-                            <i class="fas fa-envelope"></i> 
-                            <a href="mailto:yadhira.alcantara@tecsup.edu.pe">yadhira.alcantara@tecsup.edu.pe</a>
+                        
+                        <div class="ribbon">
+                            <span>Developer</span>
+                        </div>
+                        
+                        <p class="description">
+                            Desarrolladora backend enfocada en crear soluciones eficientes y escalables. 
+                            Estudiante de Diseño y Desarrollo de Software con interés en inteligencia artificial.
                         </p>
-                        <p><i class="fas fa-phone"></i> 923190931</p>
+                        
+                        <div class="skills">
+                            <div class="skill-tag"><i class="fab fa-java"></i> Java</div>
+                            <div class="skill-tag"><i class="fab fa-php"></i> PHP</div>
+                            <div class="skill-tag"><i class="fas fa-database"></i> SQL</div>
+                            <div class="skill-tag"><i class="fab fa-python"></i> Python</div>
+                            <div class="skill-tag"><i class="fas fa-leaf"></i> Spring Boot</div>
+                            <div class="skill-tag"><i class="fas fa-server"></i> API REST</div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="https://github.com/yad615" class="social-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://www.linkedin.com/in/yadhira-geraldine-alcantara-rodriguez-6b745a339/" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        </div>
+                        
+                        <div class="flip-info">
+                            <small>Haz clic para más información</small>
+                        </div>
                     </div>
                     
-                    <div class="soft-skills">
-                        <h3><i class="fas fa-users"></i> Competencias</h3>
-                        <ul class="soft-skill-grid">
-                            <li class="soft-skill-item">Metodologías Ágiles (Scrum)</li>
-                            <li class="soft-skill-item">Liderazgo</li>
-                            <li class="soft-skill-item">Resolución de Problemas</li>
-                        </ul>
+                    <div class="card-back">
+                        <h2>Mis Habilidades</h2>
+                        <div class="skill-bars">
+                            <div class="skill">
+                                <div class="skill-name">
+                                    Backend <i class="fas fa-server skill-icon"></i>
+                                    <span class="skill-percentage"></span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level skill-level-1"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-name">
+                                    Base de Datos <i class="fas fa-database skill-icon"></i>
+                                    <span class="skill-percentage"></span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level skill-level-2"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-name">
+                                    Frontend <i class="fas fa-desktop skill-icon"></i>
+                                    <span class="skill-percentage"></span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-level skill-level-3"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <h3><i class="fas fa-address-card"></i> Contacto</h3>
+                            <p>
+                                <i class="fas fa-envelope"></i> 
+                                <a href="mailto:yadhira.alcantara@tecsup.edu.pe">yadhira.alcantara@tecsup.edu.pe</a>
+                            </p>
+                            <p>
+                                <i class="fas fa-phone"></i> 
+                                <a href="tel:+51923190931">923190931</a>
+                            </p>
+                                                    </div>
+                        
+                        <div class="soft-skills">
+                            <h3><i class="fas fa-users"></i> Competencias</h3>
+                            <ul class="soft-skill-grid">
+                                <li class="soft-skill-item">Metodologías Ágiles (Scrum)</li>
+                                <li class="soft-skill-item">Liderazgo</li>
+                                <li class="soft-skill-item">Resolución de Problemas</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const card = document.querySelector('.card');
-            const flipInfo = document.querySelector('.flip-info');
-            
-            card.addEventListener('click', function(e) {
-                if (!e.target.closest('a')) {
-                    card.classList.toggle('flipped');
-                    if (card.classList.contains('flipped')) {
-                        createConfetti();
-                    }
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+    
